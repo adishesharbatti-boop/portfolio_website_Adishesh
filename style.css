@@ -367,13 +367,14 @@ section h2::after {
     --text: #0d2946;
     --light: palegoldenrod;
     --white: #ffffff;
+    --lightblue: #a0a300d7;
     --font-main: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
 }
  
 body
 {
     font-family: var(--font-main);
-    background-color: var(--white);
+    background-color:cornsilk;
     color: var(--text);
     line-height: 1.6;
     /* Prevents unwanted micro-horizontal scrolling */
@@ -535,8 +536,8 @@ section h2::after {
     transition: background-color 0.3s ease;
 }
 .btn-primary {
-    background-color: var(--accent);
-    color: var(--text);
+    background-color: black;
+    color: var(--white);
 }
 .btn-primary:hover {
     background-color: transparent;
@@ -656,7 +657,7 @@ section h2::after {
 }
 /*== Footer Styling ==*/
 .site-footer {
-    background-color: var(--text);
+    background-color: var(--lightblue);
     color: white;
     padding: 40px 5%;
     text-align: center;
@@ -674,7 +675,7 @@ section h2::after {
         top: 70px;
         left: 0;
         width: 100%;
-        background: #1B4F72;
+        background: var(--accent);
         flex-direction: column;
         text-align: center;
         padding: 20px 0;
