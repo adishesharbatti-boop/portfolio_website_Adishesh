@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Full stack developer specializing in React, Node.js, and modern web technologies. Available for freelance projects and collaborations.">
+    <meta name="keywords" content="Adishesh Arbatti, Portfolio, Web Developer, React, Node.js, JavaScript, HTML, CSS, Freelance Developer">
+    <meta name="author" content="Adishesh Arbatti">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <meta property="og:title" content="My Portfolio | Adishesh">
+    <meta property="og:description" content="Full stack developer specializing in React, Node.js, and modern web technologies. Available for freelance projects and collaborations.">
+    <meta property="og:image" content="images/profile.jpg">
+    <meta property="og:url" content="https://adishesh-portfolio.netlify.app/">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="My Portfolio | Adishesh">
+    <meta name="twitter:description" content="Full stack developer specializing in React, Node.js, and modern web technologies. Available for freelance projects and collaborations.">
+    <meta name="twitter:image" content="images/profile.jpg">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="My Portfolio | Adishesh">
+    <meta property="og:description" content="Full stack developer specializing in React, Node.js, and modern web technologies. Available for freelance projects and collaborations.">
+    <meta property="og:image" content="images/profile.jpg">
+    <meta property="og:url" content="https://adishesh-portfolio.netlify.app/">
+    <title>My Portfolio | Adishesh</title>
+</head>
+<body>
+     <!-- Header + Navigation -->
+    <header class="SiteHeader">
+        <nav class="Navbar">
+            <div class="Logo">Adishesh Arbatti</div>
+            <ul class="NavLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+    <!-- Toggle dark mode -->
+    <button id="dark-mode-toggle">🌙</button>
+    <!-- Toggle mobile menu -->
+    <button id="mobile-menu-toggle" aria-expanded="false">☰</button>
+    <!-- HERO SECTION -->
+   <header id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hi, I'm Adishesh, a passionate web developer.</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </header>
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h2>About Me</h2>
+        <figure>
+            <img src="profile.jpeg" alt="Adishesh's Profile Picture" width="200" height="200">
+        </figure>
+        <figcaption>Adishesh Arbatti</figcaption>
+        <p>I am a web developer with experience in building responsive and user-friendly websites. I enjoy creating innovative solutions and learning new technologies.</p>
+    </section>
+    <!-- EDUCATION SECTION -->
+    <section id="education">
+        <h2>Education</h2>
+        <p><strong>Bachelor of Science in Computer Science</strong></p>
+        <p>University of Example, 2020-2024</p>
+        <h2>Achievements</h2>
+        <ol>
+            <li>Dean's List (2020, 2021)</li>
+            <li>Winner, University Hackathon (2021)</li>
+        </ol>
+    </section>
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React.js, Node.js</li>
+            <li>Python, Django</li>
+            <li>Database Management (SQL, MongoDB)</li>
+            <li>Version Control (Git)</li>
+        </ul>
+    </section>
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-card">
+            <div data-id="1" data-category="web-development" data-year="2026" data-tech="React">
+        <h3>Weather App</h3>
+        <p>A weather forecasting application built with React and OpenWeatherMap API.</p>
+        <div>
+        <a href="project1.html" class="btn">View Project</a>
+</div>
+        <iframe 
+  width="560" 
+  height="315" 
+  src="https://www.youtube.com/embed/s2skans2dP4" 
+  title="YouTube video player" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowfullscreen>
+</iframe>
+    </div>
+            <h3>Responsive Website </h3>
+            <p>A responsive website designed with modern UI principles.</p>
+            <p><a href="project2.html" class="btn">View Project</a></p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qyomWr_C_jA?si=lU2zcdu50SjIq06c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="project-card">
+            <h3>Full-Stack Application</h3>
+            <p>A full-stack application using React.js and Node.js.</p>
+            <p><a href="project3.html" class="btn">View Project</a></p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/CgkZ7MvWUAA?si=sUbFIbQ6Ekcuz8TG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you would like to get in touch, please reach out via email or connect with me on LinkedIn and GitHub.</p>
+        <h2>Get In Touch</h2>
+             <form id="contact-form" action="" method="POST">
+                <div class="form-goup">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+             </form>
+            </section>
+       
+        <p>Email: <a href="mailto:adishesharbatti@gmail.com">adishesharbatti@gmail.com</a></p>
+       <p>Phone: <a href="tel:+918951271697">+91 8951271697</a></p>
+       <p>LinkedIn: <a href="https://www.linkedin.com/in/adishesh-arbatti-77324b389/" target="_blank">Adishesh Arbatti</a></p>
+       <p>GitHub: <a href="https://github.com/adishesharbatti-boop" target="_blank" class="contact-icon">
+                  <i class="fab fa-github"></i> GitHub>adishesharbatti</a></p>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Adishesh. All rights reserved.</p>
+    </footer>
+</body>
+</html>
