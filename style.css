@@ -1,3 +1,4 @@
+
 /* style.css — Your first CSS file! */
  
 /* A CSS rule has 3 parts:
@@ -14,351 +15,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-:root {
-    --primary: #e4c664;
-    --accent: beige;
-    --text: #0d2946;
-    --light: palegoldenrod;
-    --white: #ffffff;
-    --font-main: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
-}
- 
-body
-{
-    font-family: var(--font-main);
-    background-color: var(--white);
-    color: var(--text);
-    line-height: 1.6;
-    /* Prevents unwanted micro-horizontal scrolling */
-    overflow-x: hidden;
-}
-/*section {
-    padding: 80px 5%;
-}
-section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 50px;
-    text-align: center;
-    color: var(--text);
-}
-section h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: var(--accent);
-    margin: 10px auto 0;
-    border-radius: 2px;
-}*/
-/* NAVIGATION */
-.navbar {
-    background-color: rgb(192, 196, 1);
-    color: var(--white);
-    padding: 20px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: var(--white);
-}
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-.nav-links a {
-    color:maroon;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-.nav-links a:hover {
-    color: var(--accent);
-
-}
-
-
-/*  HERO SECTION */
-.hero-section {
-    background: linear-gradient(135deg, var(--primary),#2eab77);
-    padding: 100px 20px;
-    text-align: center;
-    color: var(--white);
-}
-.hero-section h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-/* SKILLS SECTION */
-.skills-grid {
-   display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px 5%;
-    margin-top: 40px;
-}
-.skill-item {
-    background-color: var(--light);
-    border: 2px solid var(--text);
-    border-radius: 12px;
-    padding: 30px 20px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.skill-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-/* PROJECTS SECTION */
-
-.projects-grid {
-    display: grid;
-    /* Forces exactly 1 column on small screens (< 768px) */
-    grid-template-columns: 1fr; 
-    gap: 24px;
-    padding: 20px 5%;
-    width: 100%;
-}
-
-/* TABLET BREAKPOINT (768px to 1023px): 2 Columns */
-@media (min-width: 768px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .menu-toggle {
-    display: none;
-    background: transparent;
-    border: none;
-    font-size: 1.8rem;
-    color: var(--white);
-    cursor: pointer;
-}
-}
-
-/* DESKTOP BREAKPOINT (1024px+): 3 Columns */
-@media (min-width: 1024px) {
-    .projects-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* PROJECT CARD STYLING (Ensures no overflow) */
-.project-card {
-    background-color: var(--accent);
-    border-radius: 15px;
-    width: 100%; /* Spans full cell width; DO NOT set hard px widths */
-    min-height: 400px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-}
-
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.project-card-body {
-    padding: 20px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-.btn{
-    display: inline-block;
-    padding: 12px 28px;
-    border-radius: 8px;
-    background-color: var(--transparent);
-    color: var(--text);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-.btn-primary {
-    background-color: var(--accent);
-    color: var(--text);
-}
-.btn-primary:hover {
-    background-color: transparent;
-    color: var(--black);
-    border-color: var(--accent);
-}
-.btn-secondary {
-    background-color:transparent;
-    color: var(--accent);
-    border-color: var(--accent);
-}
-.btn-secondary:hover {
-    background-color: var(--white);
-    color: var(--primary);
-}
-.about-content {
-    display: flex;
-    flex-direction: column; /* Stacks image and bio text vertically */
-    align-items: center;    /* Centers image and text horizontally */
-    justify-content: center;
-    text-align: center;     /* Centers the bio text content */
-    gap: 25px;              /* Adjust gap spacing as needed */
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.profile-figure {
-    /* Removed flex: 1 so it doesn't take up full width when stacked */
-    text-align: center;
-}
-
-.profile-figure img {
-    width: 100%;
-    max-width: 200px;
-    border-radius: 50%; /* Changed to 50% for a perfect circle */
-    border: 4px solid var(--text);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.profile-figure img:hover {
-    transform: scale(1.05);
-}
-
-.profile-figure figcaption {
-    margin-top: 15px;
-    font-style: italic;
-    font-weight: 500;
-    color: var(--text);
-}
-.about-text{
-    flex: 1;
-    font-size: 1.1rem;
-    line-height: 1.8;
-   
-}
-/*--Section Styling--*/
-section {
-    padding: 80px 5%;
-}
-section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 50px;
-    text-align: center;
-    color: var(--text);
-}
-section h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: var(--primary);
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
-/*== Animations ==*/
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-.hero-section h1 {
-    animation: fadeInUp 0.8s ease 0.2s both;
-}
-.hero-section p {
-    animation: fadeInUp 0.8s ease 0.4s both;
-}
-.hero-buttons  {
-    animation: fadeInUp 0.8s ease 0.6s both;
-}
-/*==Contact Form Styling==*/
-<<<<<<< HEAD
-.contact-form {
-   background-color: var(--accent);
-}
-.form-group {
-    margin-bottom: 20px;
-}   
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-.form-group input,
-.form-group textarea,.form-select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid var(--text);
-    border-radius: 5px;
-    font-size: 1rem;
-}   
-.form-group input:focus,
-.form-group textarea:focus,.form-select:focus {
-    outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 5px var(--primary);
-}
-/*== Footer Styling ==*/
-.site-footer {
-    background-color: var(--text);
-    color: white;
-    padding: 40px 5%;
-    text-align: center;
-}
-/*== Responsive Design ==*/
-@media (max-width:768px){
-    .menu-toggle{
-        display:block;
-    }
-    .nav-links{
-        display:none;
-        position:absolute;
-        top:70px;
-        left:0;
-        width:100%;
-        background:#1B4F72;
-        flex-direction:column;
-        text-align:center;
-        padding:20px 0;
-        gap:20px;
-    }
-.nav-links.open{
-        display:flex;
- 
-    }
-}
-/* style.css — Your first CSS file! */
- 
-/* A CSS rule has 3 parts:
-   SELECTOR { PROPERTY: VALUE; }
- 
-   Selector = WHAT to style
-   Property = WHAT aspect to change
-   Value = HOW to change it
-*/
-/* Must be at line 1 of your style.css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 80px;
 }
 
 :root {
@@ -399,6 +58,13 @@ section h2::after {
     border-radius: 2px;
 }*/
 /* NAVIGATION */
+.site-header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--lightblue);
+    transition: transform 0.3s ease 0.3s;
+}
 .navbar {
     background-color: rgb(192, 196, 1);
     color: var(--white);
@@ -485,9 +151,10 @@ section h2::after {
 }
 
 /* DESKTOP BREAKPOINT (1024px+): 3 Columns */
-@media (min-width: 1024px) {
-    .projects-grid {
-        grid-template-columns: repeat(3, 1fr);
+/* Standard Desktop View (screens wider than 768px) */
+@media (min-width: 769px) {
+    .menu-toggle { /* Replace with your actual hamburger button class/ID */
+        display: none !important;
     }
 }
 
@@ -628,8 +295,6 @@ section h2::after {
     animation: fadeInUp 0.8s ease 0.6s both;
 }
 /*==Contact Form Styling==*/
-=======
->>>>>>> ecba4be (update style.css to fix the menu toggle button)
 .contact-form {
    background-color: var(--accent);
 }
@@ -685,4 +350,7 @@ section h2::after {
     .nav-links.open {
         display: flex;
     }
+}
+.site-header.scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
