@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 80px;
+}
+
+:root {
+    --primary: #e4c664;
+    --accent: beige;
+    --text: #0d2946;
+    --light: palegoldenrod;
+    --white: #ffffff;
+    --black: #000000;
+    --transparent: transparent;
+    --lightblue: #a0a300d7;
+    --font-main: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: cornsilk;
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}

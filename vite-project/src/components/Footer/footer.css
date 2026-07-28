@@ -1,0 +1,11 @@
+.site-footer {
+    background-color: var(--lightblue);
+    color: white;
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.site-footer a {
+    color: var(--white);
+    margin: 0 10px;
+}
