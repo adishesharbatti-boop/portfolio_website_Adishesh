@@ -1,0 +1,43 @@
+/* HERO SECTION */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary, #e4c664), #2eab77);
+    padding: 100px 20px;
+    text-align: center;
+    color: var(--white, #ffffff);
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.hero-section .highlight {
+    color: var(--text, #0d2946);
+}
+
+.hero-section .tagline {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    animation: fadeInUp 0.8s ease 0.6s both;
+}
+
+/* FADE-IN ANIMATION KEYFRAMES */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
