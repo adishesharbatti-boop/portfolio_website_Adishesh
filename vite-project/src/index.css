@@ -23,6 +23,7 @@ html {
     --font-main: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Base Body Styles */
 body {
     font-family: var(--font-main);
     background-color: cornsilk;
@@ -31,6 +32,176 @@ body {
     overflow-x: hidden;
 }
 
+/* Dark Mode Global Overrides */
+body[data-theme="dark"] {
+    background: #121212;
+    color: #f5f5f5;
+}
+
+/* Header & Navbar Dark */
+body[data-theme="dark"] .site-header,
+body[data-theme="dark"] .navbar {
+    background: #1a1a1a;
+}
+
+/* Navigation Links Dark */
+body[data-theme="dark"] .nav-links a {
+    color: #ffffff;
+}
+
+body[data-theme="dark"] .nav-links a:hover,
+body[data-theme="dark"] .nav-links a.active {
+    color: #F18F01;
+}
+
+/* Logo Dark */
+body[data-theme="dark"] .logo {
+    color: #ffffff;
+}
+
+/* Hero Dark */
+body[data-theme="dark"] .hero-section {
+    background: linear-gradient(135deg, #111827, #1f2937);
+}
+
+/* Highlight Dark */
+body[data-theme="dark"] .highlight {
+    color: #F18F01;
+}
+
+/* About Dark */
+body[data-theme="dark"] .about-section {
+    background: #121212;
+    color: #f5f5f5;
+}
+
+/* Skills Dark */
+body[data-theme="dark"] .skills-section {
+    background: #181818;
+}
+
+body[data-theme="dark"] .skill-item {
+    background: #242424;
+    color: #ffffff;
+    border-color: #F18F01;
+}
+
+/* GitHub Stats Dark */
+body[data-theme="dark"] .github-stats {
+    background: #1f2937;
+    color: #ffffff;
+    border: 1px solid #374151;
+}
+
+/* Skill Cards Dark */
+body[data-theme="dark"] .skill-card {
+    background: #1f2937;
+    border: 1px solid #374151;
+    color: #ffffff;
+}
+
+body[data-theme="dark"] .skill-name {
+    color: #ffffff;
+}
+
+body[data-theme="dark"] .skill-level {
+    color: #F18F01;
+}
+
+/* Projects Dark */
+body[data-theme="dark"] .projects-section {
+    background: #121212;
+}
+
+body[data-theme="dark"] .project-card {
+    background: #242424;
+    color: #ffffff;
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.08);
+}
+
+body[data-theme="dark"] .project-card h3,
+body[data-theme="dark"] .project-card p {
+    color: #ffffff;
+}
+
+/* Filter Buttons Dark Mode Overrides */
+body[data-theme="dark"] .filter-btn {
+    border-color: #F18F01;
+    color: #F18F01;
+}
+
+body[data-theme="dark"] .filter-btn:hover,
+body[data-theme="dark"] .filter-btn.active {
+    background: #F18F01;
+    color: #ffffff;
+}
+
+/* Tags Dark */
+body[data-theme="dark"] .tag {
+    background: #F18F01;
+    color: #ffffff;
+}
+
+/* Contact Dark */
+body[data-theme="dark"] .contact-section {
+    background: #181818;
+}
+
+/* Form Dark */
+body[data-theme="dark"] input,
+body[data-theme="dark"] textarea {
+    background: #2b2b2b;
+    color: #ffffff;
+    border: 1px solid #555;
+}
+
+body[data-theme="dark"] input::placeholder,
+body[data-theme="dark"] textarea::placeholder {
+    color: #bdbdbd;
+}
+
+body[data-theme="dark"] label {
+    color: #ffffff;
+}
+
+/* Buttons Dark */
+body[data-theme="dark"] .btn-primary {
+    background: #F18F01;
+    color: #ffffff;
+}
+
+body[data-theme="dark"] .btn-secondary {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+body[data-theme="dark"] .btn-secondary:hover {
+    background: #ffffff;
+    color: #121212;
+}
+
+/* Footer Dark */
+body[data-theme="dark"] .site-footer {
+    background: #1a1a1a;
+    color: #cccccc;
+}
+
+body[data-theme="dark"] .site-footer a {
+    color: #ffffff;
+}
+
+body[data-theme="dark"] .site-footer a:hover {
+    color: #F18F01;
+}
+
+/* Theme Toggle Button Dark */
+body[data-theme="dark"] .theme-toggle {
+    background: #333333;
+    color: #ffffff;
+    border: 1px solid #666666;
+}
+
+/* === BUTTON STYLES === */
 .btn {
     display: inline-block;
     padding: 12px 28px;
@@ -50,17 +221,95 @@ body {
 
 .btn-primary:hover {
     background: transparent;
-    color: var(--accent);
-    border-color: var(--accent);
+    color: var(--text);
+    border-color: var(--text);
 }
 
 .btn-secondary {
     background: transparent;
-    color: var(--white);
-    border-color: var(--white);
+    color: var(--text);
+    border-color: var(--text);
 }
 
 .btn-secondary:hover {
-    background: var(--white);
-    color: var(--primary);
+    background: var(--text);
+    color: var(--white);
 }
+
+/* Filter Buttons Light Mode */
+.filter-btn {
+    padding: 8px 20px;
+    background: transparent;
+    border: 2px solid var(--text);
+    color: var(--text);
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--text);
+    color: var(--white);
+}
+
+/* === PAGE & LAYOUT STRUCTURE === */
+.container {
+    width: min(1200px, 100% - 40px);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.projects-header {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.project-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.about-page,
+.contact-page,
+.projects-page,
+.project-detail-page,
+.home-page {
+    padding: 40px 0;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: var(--text);
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .projects-header {
+        align-items: center;
+        text-align: center;
+    }
+}
+ 
