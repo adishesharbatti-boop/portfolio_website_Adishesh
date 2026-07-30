@@ -1,5 +1,5 @@
 import React from 'react';
-import './skillCard.css';
+import './skillcard.css';
 
 function SkillCard({ name, level, icon }) {
   const levelPercent = { Beginner: 33, Intermediate: 66, Advanced: 90 };
