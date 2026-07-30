@@ -1,6 +1,6 @@
 import React from 'react';
 import AboutSection from '../components/About/about';
-import GitHubStats from '../components/Githubstats/Github';
+import GitHubStats from '../components/Githubstats/github';
 import SkillCard from '../components/SkillCard/skillcard';
 
 const SKILLS = [
