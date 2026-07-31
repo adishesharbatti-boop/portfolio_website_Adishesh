@@ -1,35 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './ProjectCard.css';
 
 export default function ProjectCard({ project }) {
   return (
     <div className="project-card">
-      <div className="card-content">
+      <div className="card-top">
         <h3 className="project-title">{project.title}</h3>
         <p className="project-description">{project.description}</p>
         
-        {/* Tags */}
+        {/* Yellow Tag Badges */}
         <div className="tags-container">
           {project.tags?.map((tag, index) => (
-            <span key={index} className="tag">{tag}</span>
+            <span key={index} className="tag-badge">
+              {tag}
+            </span>
           ))}
         </div>
       </div>
 
-      {/* Buttons */}
+      {/* Button Row */}
       <div className="button-group">
-        {/* Navigates to detail page */}
-        <Link to={`/projects/${project.id}`} className="btn btn-primary">
-          View Project 🚀
+        {/* Dark Navy Button linking to Details/Live Page */}
+        <Link to={`/projects/${project.id}`} className="btn btn-live">
+          View Live 🚀
         </Link>
 
-        {/* GitHub Button */}
+        {/* Bordered Button linking to GitHub */}
         {project.githubLink && (
           <a 
             href={project.githubLink} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="btn btn-secondary"
+            className="btn btn-github"
           >
             GitHub 💻
           </a>
