@@ -7,6 +7,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import ProjectDetail from './pages/ProjectDetails';
 
 function App() {
   // Read saved theme on initial render (prevents layout flash)
@@ -33,6 +34,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/projects/:id" element={<ProjectDetail />} />
       </Routes>
       <Footer />
     </BrowserRouter>
