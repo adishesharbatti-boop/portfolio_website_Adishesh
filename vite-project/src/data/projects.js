@@ -1,7 +1,10 @@
+export const categories = ['All', 'Web App', 'IoT'];
+
 export const projectsData = [
   {
     id: 1,
     title: 'Weather App',
+    category: 'Web App',
     description: 'Real-time weather for any city.',
     longDesc: 'A full-featured weather application that fetches real-time updates using REST APIs. Provides 7-day forecasts, temperature trends, humidity metrics, and location search capabilities.',
     tags: ['React', 'CSS', 'REST API'],
@@ -12,6 +15,7 @@ export const projectsData = [
   {
     id: 2,
     title: 'Portfolio Site',
+    category: 'Web App',
     description: 'This dynamic multi-page React portfolio.',
     longDesc: 'A sleek, responsive portfolio website built with React and React Router DOM. Features page routing, custom styling, dynamic project loading, and responsive card layouts.',
     tags: ['React', 'CSS3', 'React Router'],
@@ -22,6 +26,7 @@ export const projectsData = [
   {
     id: 3,
     title: 'Smart Ultrasonic Distance Tracker',
+    category: 'IoT',
     description: 'Arduino IoT distance and obstacle monitoring system.',
     longDesc: 'An IoT project using HC-SR04 ultrasonic sensors and C++ programming on Arduino to continuously measure distance, flag obstacles, and log telemetry data in real time.',
     tags: ['C++', 'Arduino', 'IoT'],
@@ -32,6 +37,7 @@ export const projectsData = [
   {
     id: 4,
     title: 'Todo Manager',
+    category: 'Web App',
     description: 'Kanban-style task board.',
     longDesc: 'A streamlined Kanban task management application allowing drag-and-drop task arrangement across standard workflow columns (To Do, In Progress, Done).',
     tags: ['JavaScript', 'HTML5', 'CSS3'],
@@ -39,4 +45,5 @@ export const projectsData = [
     githubLink: 'https://github.com/example/todo-manager',
     youtubeLink: 'https://www.youtube.com/watch?v=SJTazZUQVDE'
   },
+];
 ];
