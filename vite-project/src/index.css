@@ -63,7 +63,14 @@ body[data-theme="dark"] .logo {
 body[data-theme="dark"] .hero-section {
     background: linear-gradient(135deg, #111827, #1f2937);
 }
+.hero-section {
+    overflow: hidden;
+    margin-top: 0;
+}
 
+.hero-section h1 {
+    margin-top: 0;
+}
 /* Highlight Dark */
 body[data-theme="dark"] .highlight {
     color: #F18F01;
