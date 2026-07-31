@@ -1,48 +1,40 @@
 import React from 'react';
-import './projectcard.css';
+import { Link } from 'react-router-dom';
 
-function ProjectCard({ project }) {
-  // Safety check to prevent crashing if project prop is missing
-  if (!project) return null;
-
-  const { title, description, tech = [], link, github } = project;
-
+export default function ProjectCard({ project }) {
   return (
-    <article className="project-card">
-      <div className="project-card-body">
-        <h3>{title || 'Untitled Project'}</h3>
-        <p>{description || 'No description provided.'}</p>
-
-        {tech.length > 0 && (
-          <div className="project-tags">
-            {tech.map(t => (
-              <span key={t} className="tag">
-                {t}
-              </span>
-            ))}
-          </div>
-        )}
-
-        <div className="project-card-actions" style={{ marginTop: '15px', display: 'flex', gap: '10px' }}>
-          {link ? (
-            <a href={link} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              View Live 🚀
-            </a>
-          ) : (
-            <button className="btn btn-primary" disabled>
-              View Project
-            </button>
-          )}
-
-          {github && (
-            <a href={github} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-              GitHub 💻
-            </a>
-          )}
+    <div className="project-card">
+      <div className="card-content">
+        <h3 className="project-title">{project.title}</h3>
+        <p className="project-description">{project.description}</p>
+        
+        {/* Tags */}
+        <div className="tags-container">
+          {project.tags?.map((tag, index) => (
+            <span key={index} className="tag">{tag}</span>
+          ))}
         </div>
       </div>
-    </article>
+
+      {/* Buttons */}
+      <div className="button-group">
+        {/* Navigates to detail page */}
+        <Link to={`/projects/${project.id}`} className="btn btn-primary">
+          View Project 🚀
+        </Link>
+
+        {/* GitHub Button */}
+        {project.githubLink && (
+          <a 
+            href={project.githubLink} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn btn-secondary"
+          >
+            GitHub 💻
+          </a>
+        )}
+      </div>
+    </div>
   );
 }
-
-export default ProjectCard;
