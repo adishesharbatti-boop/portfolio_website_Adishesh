@@ -120,6 +120,7 @@ section h2::after {
 }
 
 .hero-section h1 {
+    margin-top: 0;
     font-size: 3rem;
     margin-bottom: 20px;
     animation: fadeInUp 0.8s ease 0.2s both;
