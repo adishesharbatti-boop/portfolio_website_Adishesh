@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { projectsData } from '../data/projects';
 
-export default function ProjectDetail() {
+ function ProjectDetail() {
   const { id } = useParams();
   const project = projectsData.find((p) => p.id === parseInt(id));
 
