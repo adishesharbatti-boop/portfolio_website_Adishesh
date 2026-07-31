@@ -46,4 +46,4 @@ export const projectsData = [
     youtubeLink: 'https://www.youtube.com/watch?v=SJTazZUQVDE'
   },
 ];
-];
+
