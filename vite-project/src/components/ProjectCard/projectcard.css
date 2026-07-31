@@ -1,56 +1,93 @@
-
+/* Card Container */
 .project-card {
-  background-color: #f6f3df; /* Soft cream card background */
-  border-radius: 18px;
-  padding: 24px 20px;
+  background-color: #f6f3e3; /* Light beige card background */
+  border-radius: 20px;
+  padding: 2rem 1.75rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
 }
 
-.project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+.card-top {
+  margin-bottom: 1.5rem;
 }
 
+/* Header & Description */
 .project-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #0d2946;
-  margin-bottom: 16px;
+  color: #0b2238; /* Deep dark blue text */
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.3px;
 }
 
-.project-tags {
+.project-description {
+  color: #2c3e50;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0 0 1rem 0;
+  font-weight: 400;
+}
+
+/* Tags / Badges */
+.tags-container {
   display: flex;
-  gap: 8px;
   flex-wrap: wrap;
-  margin-bottom: 24px;
+  gap: 0.5rem;
 }
 
-.tag {
-  background-color: #e4c664; /* Soft yellow badge */
-  color: #0d2946;
+.tag-badge {
+  background-color: #e3c457; /* Warm yellow/gold tag background */
+  color: #0b2238;
+  font-weight: 700;
   font-size: 0.85rem;
-  font-weight: 600;
-  padding: 4px 14px;
-  border-radius: 15px;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px; /* Fully rounded pill shape */
+  display: inline-block;
 }
 
-.view-project-btn {
-  width: 100%;
-  padding: 12px 0;
-  background-color: #000000;
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
+/* Buttons */
+.button-group {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
   cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
-.view-project-btn:hover {
-  background-color: #222222;
+/* View Live (Solid Dark Navy) */
+.btn-live {
+  background-color: #0d2744;
+  color: #ffffff;
+  border: 2px solid #0d2744;
+}
+
+.btn-live:hover {
+  background-color: #17385e;
+  border-color: #17385e;
+}
+
+/* GitHub (Outlined) */
+.btn-github {
+  background-color: transparent;
+  color: #0b2238;
+  border: 2px solid #0b2238;
+}
+
+.btn-github:hover {
+  background-color: rgba(11, 34, 56, 0.05);
 }
